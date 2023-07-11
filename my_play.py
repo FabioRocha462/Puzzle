@@ -28,28 +28,32 @@ def numbers():
     return numbers  # Embaralha os números aleatoriamente
 
 initial_state = numbers()
-
-def solve_eight_puzzle(initial_state):
-    # Converte o estado inicial em uma lista de Prolog
-    initial_state_list = list(initial_state)
-    new_kb.assertz("initial_state({})".format(initial_state_list))
-
-    # Encontra a solução usando Prolog
-    solutions = list(new_kb.query("solve(Solution)"))
-
-    # Retorna a solução encontrada
-    if solutions:
-        return solutions[0]["Solution"]
-    else:
-        return None
+initial_state_list = list(initial_state)
+print(new_kb.query(pl.Expr("initial_state({})")))
 
 
-solution = solve_eight_puzzle(initial_state)
+# def solve_eight_puzzle(initial_state):
+#     # Converte o estado inicial em uma lista de Prolog
+#     initial_state_list = list(initial_state)
+#     # new_kb.assertz("initial_state({})".format(initial_state_list))
+#     new_kb.query(pl.Expr("initial_state({})".format(initial_state_list)), cut = True)
 
-if solution:
-    print("Solução encontrada:")
-    for step in solution:
-        print(step)
-else:
-    print("Não foi possível encontrar uma solução.")
+#     # Encontra a solução usando Prolog
+#     solutions = list(new_kb.query("solve(Solution)"))
+
+#     # Retorna a solução encontrada
+#     if solutions:
+#         return solutions[0]["Solution"]
+#     else:
+#         return None
+
+
+# solution = solve_eight_puzzle(initial_state)
+
+# if solution:
+#     print("Solução encontrada:")
+#     for step in solution:
+#         print(step)
+# else:
+#     print("Não foi possível encontrar uma solução.")
 
