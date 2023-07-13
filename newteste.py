@@ -21,4 +21,41 @@ for response in responses:
 
     print(response)
 
-response = prolog.query("mulher(ana).")
+print("--------------------------------")
+
+responses = prolog.query("ancestral(pedro,X).")
+
+for response in responses:
+
+    print(response)
+
+print("--------------------------------")
+
+responses = prolog.query("avo(X,mariana).")
+
+for response in responses:
+    print(response)
+
+print("--------------------------------")
+
+responses = prolog.query("irmao(Y,izabel).")
+
+for response in responses:
+    print(response)
+
+
+print("--------------------------------")
+
+responses = prolog.query("pai(X,andre).")
+
+for response in responses:
+    print(response)
+
+print("--------------------------------")
+
+responses = prolog.query("ancestral(X,andre).")
+
+for response in responses:
+    print(response)
+
+# aresponses = prolog.query("avo(X,
