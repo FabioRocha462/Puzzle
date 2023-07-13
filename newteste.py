@@ -58,4 +58,9 @@ responses = prolog.query("ancestral(X,andre).")
 for response in responses:
     print(response)
 
-# aresponses = prolog.query("avo(X,
+print("--------------------------------")
+
+responses = prolog.query("tio(Y,luiz).")
+
+for response in responses:
+    print(response)

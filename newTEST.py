@@ -4,7 +4,7 @@ import random
 prolog = Prolog()
 prolog.consult("newsroles.pl")
 
-solutions = prolog.query("test(Plan).")
+solutions = prolog.query("write_sol([]).")
 
 for step in solutions:
     print(step)

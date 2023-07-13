@@ -45,3 +45,5 @@ mae(X,Y) :- progenitor(X,Y), mulher(X).
 pai(X,Y) :- progenitor(X,Y), homem(X).
 
 irmao(X,Y) :- pai(X,Y);mae(X,Y).
+
+tio(X,Y) :- progenitor(Z,Y),irmao(X,Z).
