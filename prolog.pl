@@ -46,4 +46,4 @@ pai(X,Y) :- progenitor(X,Y), homem(X).
 
 irmao(X,Y) :- pai(X,Y);mae(X,Y).
 
-tio(X,Y) :- progenitor(Z,Y),irmao(X,Z).
+tio(X,Y) :- ancestral(Z,Y),irmao(X,Z).

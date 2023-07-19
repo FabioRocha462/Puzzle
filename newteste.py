@@ -60,7 +60,7 @@ for response in responses:
 
 print("--------------------------------")
 
-responses = prolog.query("tio(Y,luiz).")
+responses = prolog.query("tio(Y,mariana).")
 
 for response in responses:
     print(response)
